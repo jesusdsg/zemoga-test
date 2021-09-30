@@ -1,0 +1,70 @@
+{
+    "data": [
+        {
+            "name": "Kanye West",
+            "description": "Born in Atlanta and raised in Chicago, West was first known as a producer for Roc-A-Fella Records in the early 2000s, producing singles for several mainstream artists.",
+            "category": "entertainment",
+            "picture": "https://firebasestorage.googleapis.com/v0/b/zemoga-test-581c9.appspot.com/o/kaye.jpg?alt=media&token=fd57d3de-4dc7-4438-b63d-7a6e7f602ee8",
+            "lastUpdated": "2020-03-10T23:08:57.892Z",
+            "votes": {
+                "positive": 23,
+                "negative": 36
+            }
+        },
+        {
+            "name": "Mark Zuckerberg",
+            "description": "Born in White Plains, New York, Zuckerberg attended Harvard University, where he launched the Facebook social networking service from his dormitory room on February 4, 2004.",
+            "category": "business",
+            "picture": "https://firebasestorage.googleapis.com/v0/b/zemoga-test-581c9.appspot.com/o/2.jpg?alt=media&token=dfd9a83d-f43f-4c2a-99af-f89ce6efd83e",
+            "lastUpdated": "2021-02-14T23:10:19.134Z",
+            "votes": {
+                "positive": 418,
+                "negative": 324
+            }
+        },
+        {
+            "name": "Cristina Fernández de Kirchner",
+            "description": "Her first term of office started with a conflict with the agricultural sector, and her proposed taxation system was rejected.",
+            "category": "politics",
+            "picture": "https://firebasestorage.googleapis.com/v0/b/zemoga-test-581c9.appspot.com/o/3.jpg?alt=media&token=525a14ca-6e70-4dc8-9fd1-8abc8986d68c",
+            "lastUpdated": "2020-12-10T23:41:07.120Z",
+            "votes": {
+                "positive": 45,
+                "negative": 97
+            }
+        },
+        {
+            "name": "Malala Yousafzai",
+            "description": "The daughter of educational activist Ziauddin, Yousafzai was born to a Pashtun family in Mingora, Khyber Pakhtunkhwa, Pakistan. Her family came to run a chain of schools in the region.",
+            "category": "politics",
+            "picture": "https://firebasestorage.googleapis.com/v0/b/zemoga-test-581c9.appspot.com/o/4.jpg?alt=media&token=6b99dfa6-a229-4e8f-a26e-1ba88e055912",
+            "lastUpdated": "2020-12-10T23:41:07.120Z",
+            "votes": {
+                "positive": 18,
+                "negative": 3
+            }
+        },
+        {
+            "name": "Elon Musk",
+            "description": "In 2002, Musk founded SpaceX, an aerospace manufacturer and space transport services company, of which he is CEO, CTO, and lead designer.",
+            "category": "business",
+            "picture": "https://firebasestorage.googleapis.com/v0/b/zemoga-test-581c9.appspot.com/o/5.jpg?alt=media&token=25313e95-c013-4dd5-a030-f4218f38336c",
+            "lastUpdated": "2020-12-20T23:43:38.041Z",
+            "votes": {
+                "positive": 1237,
+                "negative": 894
+            }
+        },
+        {
+            "name": "Greta Thumberg",
+            "description": "Thunberg's activism started after convincing her parents to adopt several lifestyle choices to reduce their own carbon footprint.",
+            "category": "environment",
+            "picture": "https://firebasestorage.googleapis.com/v0/b/zemoga-test-581c9.appspot.com/o/6.jpg?alt=media&token=7542b123-f2bc-429e-835f-7c73bae474db",
+            "lastUpdated": "2021-02-26T23:44:50.326Z",
+            "votes": {
+                "positive": 118,
+                "negative": 45
+            }
+        }
+    ]
+}

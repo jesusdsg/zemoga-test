@@ -1,0 +1,420 @@
+.search-icon {
+  fill: #fff !important;
+}
+
+.people__main-title {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.block {
+  display: block;
+  margin-top: 1rem;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.slider__card {
+    flex: 0 0 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*Start Transforming in grid*/
+.grid {
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.grid > .card {
+  height: 300px;
+}
+
+.grid  .people-card__vote-container {
+  margin-top: 14.7rem;
+}
+
+.grid  .people-card__result {
+  width: 10px;
+  height: 10px;
+  margin-top: 5rem;
+}
+
+.grid  .people-card__result-icon {
+  margin: 0px;
+  margin-left: -5px;
+  margin-top: -2px;
+}
+
+.grid  .people-card__info {
+  color: #fff;
+  margin-left: 12%;
+  margin-bottom: -2rem;
+  margin-top: -14.6rem;
+  height: 20px;
+}
+
+.grid  .people-card__name {
+  color: #fff !important;
+  margin-bottom: 5px;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 25px;
+}
+
+.grid  .people-card__description {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 300px;
+  height: 30px;
+}
+
+.grid  .people-card__date {
+  float: none;
+  color: #fff;
+  padding-top: 9.6rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+
+}
+
+.grid  .icon-button {
+  padding: 5px;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+
+.grid  .vote-container__rightside {
+  padding: 15px;
+  height: 10px;
+}
+
+.grid  .vote-container__leftside {
+  padding: 15px;
+  height: 10px;
+}
+
+
+.grid .slider__card {
+  background: 5% 127% no-repeat;
+}
+
+.grid  .vote-result__negative {
+  width: 10px;
+  height: 10px;
+  margin-top: 4rem;
+}
+
+.grid  .vote-result__positive {
+  width: 10px;
+  height: 10px;
+  margin-top: 4rem;
+}
+
+.grid .people-card__result-icon {
+  height: 12px;
+}
+
+
+/*Ending transforming in grid*/
+
+.card {
+  margin-bottom: 1em;
+  margin-right: 2em;
+  height: 200px;
+  background-color: rgb(129, 82, 82);
+}
+
+.people__select {
+  background: transparent;
+  outline: 1px solid #000;
+  padding: 12px 10px;
+  width: 200px;
+  float:right;
+  line-height: 1;
+}
+
+.people__select::after {
+  padding: 20px !important;
+}
+
+
+.people-card__date {
+  float: right;
+  color: #fff;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  width: 280px;
+}
+
+.people-card__buttons {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.vote-result__positive {
+  background-color: rgba(75, 177, 170, 0.8);
+  display: block;
+  width: 25px;
+  padding: 15px;
+  float: left;
+}
+
+.vote-result__negative {
+  background-color: rgba(227, 165, 51, 0.8);
+  display: block;
+  width: 25px;
+  padding: 15px;
+  float: left;
+}
+
+.people-card__result {
+  background-color: green;
+  display: block;
+  width: 25px;
+  padding: 15px;
+  float: left;
+}
+
+.people-card__result-icon {
+  margin: auto;
+  color: #fff;
+}
+
+.people-card__info {
+  color: #fff;
+  margin-left: 20%;
+  padding-top: 1rem;
+  width: 60%;
+}
+
+.people-card__name {
+  color: #fff !important;
+  margin-bottom: 5px;
+  font-weight: 400;
+font-size: 36px;
+}
+
+p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.people-card__description {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 80%;
+  height: 50px;
+}
+
+.people-card__vote-container {
+  display: flex;
+  width: 100%;
+  color: #fff;
+}
+
+.separate-button {
+  margin: 0px 5px;
+}
+
+.vote-button {
+  border: 1px solid #fff;
+  background-color: #2b2b2b;
+  padding: 10px;
+  color: #fff;
+  width: 100%;
+  font-size: large;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.vote-button:hover {
+  border: 1px solid #fff;
+  background-color: #464545;
+}
+
+.vote-button:focus {
+  content: "Erda";
+  background-color: #929292;
+}
+
+.icon-button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.vote-container__leftside {
+  background-color: rgba(75, 177, 170, 0.8);
+  width: 50%;
+  padding: 15px;
+}
+.vote-container__rightside {
+  background-color: rgba(227, 165, 51, 0.8);
+  width: 50%;
+  padding: 15px;
+}
+
+
+
+
+
+
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.outliner-button {
+  outline: 1px solid #fff;
+}
+
+.icon-button:focus {
+  outline: 1px solid #fff;
+}
+
+.no-outline {
+  outline: none;
+}
+
+@media only screen and (max-width: 768px){
+  .people-card__vote-container {
+    margin-top: -0.5rem;
+  }
+
+  .people-card__name {
+    font-size: 25px;
+  }
+  .people-card__description{
+    width: 300px;
+    height: 50px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .people__select {
+    display: none;
+  }
+
+  .block {
+    display: flex !important;
+    width: 100% !important;
+    overflow-x: scroll !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory !important;
+  }
+
+  .grid {
+    display: flex !important;
+    width: 100% !important;
+    overflow-x: scroll !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory !important;
+  }
+
+  .card {
+    height: 300px;
+  }
+
+  .people-card__vote-container {
+    margin-top: 11.5rem;
+  }
+
+  .people-card__result {
+    width: 10px;
+    height: 10px;
+    margin-top: 5rem;
+  }
+
+  .people-card__result-icon {
+    margin: 0px;
+    margin-left: -5px;
+    margin-top: -2px;
+  }
+
+  .people-card__info {
+    color: #fff;
+    margin-left: 12%;
+    margin-bottom: -2rem;
+    margin-top: -14.6rem;
+    height: 80px;
+  }
+
+  .people-card__name {
+    color: #fff !important;
+    margin-bottom: 5px;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 25px;
+  }
+  
+  .people-card__description {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 300px;
+    height: 30px;
+  }
+
+  .people-card__date {
+    float: none;
+    color: #fff;
+    padding-top: 12.8rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+
+  }
+
+  .icon-button {
+    padding: 5px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+  }
+
+  .people-card__magic-date{
+    margin-left: 20%;
+  }
+
+  .slider__card {
+    background: 5% 127% no-repeat;
+  }
+
+  .vote-result__negative {
+    width: 10px;
+    height: 10px;
+    margin-top: 4rem;
+  }
+
+  .vote-result__positive {
+    width: 10px;
+    height: 10px;
+    margin-top: 4rem;
+  }
+
+  .people-card__result-icon {
+    height: 12px;
+  }
+
+}
+
