@@ -5,7 +5,7 @@ Hi Guys! This time I have simplified the code a bit more, I have also implemente
 Using Python, flask and CORS to set API requests.
 The folder contains two main folders backend and frontend.
 
-The main test file does not include images, so I have gotten some of my own.
+The main test file does **not** include images, so I have gotten some of my own. :cold_sweat:
 
 **Backend:**
 Inside the Backend is the environment and methods for server-side execution with the python programming language.
@@ -29,4 +29,4 @@ In the same way I have generated routes to register collections, if necessary "h
 
 Finally, it would only be necessary to start the "npm start" inside the frontend folder.
 
-I hope my code compiles fine :')
+I hope my code compiles fine :relieved:
