@@ -32,7 +32,8 @@ const People = () => {
   };
 
   const handleVote = async (id) => {
-    console.log(id);
+    handleClick();
+    //console.log(id);
     const res = await fetch(`${API}/people/${id}`);
     const data = await res.json();
     if (vote === "positive") {
@@ -55,7 +56,7 @@ const People = () => {
 
   const sendVote = async (id) => {
     if (vote !== "" || vote !== 0 || vote !== null) {
-      console.log('entró al send')
+      //console.log('entró al send')
       const res = await fetch(`${API}/people/${id}`, {
         method: "PUT",
         headers: {
@@ -166,7 +167,7 @@ const People = () => {
               </div>
 
               <div className="people-card__date">
-                <span className="people-card__magic-date" id={i}>{isPressed ? magicDate : 'Thank for your Vote!'}</span>
+                <span className="people-card__magic-date" id={i}>{!isPressed ? magicDate : 'Thank for your Vote!'}</span>
                 <div className="people-card__buttons">
                   <button
                     className="icon-button separate-button"
@@ -189,9 +190,9 @@ const People = () => {
                     aria-label="vote now"
                     id={i}
                     key={i}
-                    onClick={() => handleVote(`${index._id}`), () => handleClick(i)}
+                    onClick={() => handleVote(`${index._id}`)}
                   >
-                    {isPressed ? 'Vote Now': 'Vote Again'}
+                    {!isPressed ? 'Vote Now': 'Vote Again'}
                   </button>
                 </div>
               </div>
