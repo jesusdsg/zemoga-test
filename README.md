@@ -5,6 +5,8 @@ Hi Guys! This time I have simplified the code a bit more, I have also implemente
 Using Python, flask and CORS to set API requests.
 The folder contains two main folders backend and frontend.
 
+The main test file does not include images, so I have gotten some of my own.
+
 **Backend:**
 Inside the Backend is the environment and methods for server-side execution with the python programming language.
 
