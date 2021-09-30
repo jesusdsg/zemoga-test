@@ -25,8 +25,8 @@ Finally we will execute the app.py to start the connection with the database.
 
 It should be clarified that it is necessary to have the mondoDB and the collection initialized within the database, however, I have attached a backup of mine, so that it is easier to import it, it is in the db folder.
 
-In the same way I have generated routes to register collections, if necessary "http://localhost:5000/people" (http://localhost:5000 is the default port for mongoDB) To insert a new collection.
+In the same way I have generated routes to register collections, if necessary `http://localhost:5000/people` (http://localhost:5000 is the default port for mongoDB) To insert a new collection.
 
-Finally, it would only be necessary to start the "npm start" inside the frontend folder.
+Finally, it would only be necessary to start the `npm start` inside the frontend folder.
 
 I hope my code compiles fine :relieved:
