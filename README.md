@@ -13,7 +13,7 @@ Inside the Backend is the environment and methods for server-side execution with
 **Frontend:** 
 Inside frontend they are all in reactjs, also attached the backup json.
 
-The instructions to run the server are simple:
+### The instructions to run the server are simple:
 Download and install the flask, together with cors if you don't have it with the command inside the backend folder: `pip install flask flask-PyMongo flask-cors`
 
 Then inside the terminal (still in the backend folder)
