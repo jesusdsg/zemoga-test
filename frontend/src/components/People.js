@@ -30,9 +30,14 @@ const People = () => {
     vote = value;
   };
 
-  const handleVote = async (id) => {
-    handleClick();
-    //console.log(id);
+  const cleanVotes=() => {
+    vote = "";
+    voteP = 0;
+    voteN = 0;
+  }
+
+  const handleVote = async (id, i) => {
+    setIsPressed(!isPressed);
     if (!isPressed) {
       const res = await fetch(`${API}/people/${id}`);
       const data = await res.json();
@@ -48,14 +53,10 @@ const People = () => {
         voteP = data.votes.positive;
       }
       sendVote(id);
-      vote = "";
-      voteP = 0;
-      voteN = 0;
+      cleanVotes();
       loadData();
     } else {
-      vote = "";
-      voteP = 0;
-      voteN = 0;
+      cleanVotes();
     }
   };
 
@@ -83,7 +84,7 @@ const People = () => {
     const res = await fetch(`${API}/people`);
     const data = await res.json();
     setPeople(data);
-    console.log(people);
+    //console.log(people);
   };
 
   useEffect(() => {
@@ -101,10 +102,6 @@ const People = () => {
 
   const onPressed = () => {
     setIsPressed(!isPressed);
-  };
-
-  const handleClick = (index) => {
-    onPressed(index);
   };
 
   return (
@@ -202,9 +199,9 @@ const People = () => {
                   <button
                     className="vote-button separate-button"
                     aria-label="vote now"
-                    id={i}
+                    id={'btn-'+i}
                     key={i}
-                    onClick={() => handleVote(`${index._id}`)}
+                    onClick={() => handleVote(`${index._id}`, i)}
                   >
                     {!isPressed ? "Vote Now" : "Vote Again"}
                   </button>
