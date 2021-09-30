@@ -10,6 +10,7 @@
 .block {
   display: block;
   margin-top: 1rem;
+  z-index: 20;
 }
 
 .slider {
@@ -42,6 +43,7 @@
 
 .grid  .people-card__vote-container {
   margin-top: 14.7rem;
+  height: 52px;
 }
 
 .grid  .people-card__result {
@@ -71,6 +73,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 25px;
+  width: 300px;
 }
 
 .grid  .people-card__description {
@@ -83,7 +86,7 @@
 .grid  .people-card__date {
   float: none;
   color: #fff;
-  padding-top: 9.6rem;
+  padding-top: 8.9rem;
   padding-right: 3rem;
   padding-left: 3rem;
 
@@ -94,33 +97,12 @@
   cursor: pointer;
   height: 40px;
   width: 40px;
-}
-
-.grid  .vote-container__rightside {
-  padding: 15px;
-  height: 10px;
-}
-
-.grid  .vote-container__leftside {
-  padding: 15px;
-  height: 10px;
+  z-index: 30;
 }
 
 
 .grid .slider__card {
   background: 5% 127% no-repeat;
-}
-
-.grid  .vote-result__negative {
-  width: 10px;
-  height: 10px;
-  margin-top: 4rem;
-}
-
-.grid  .vote-result__positive {
-  width: 10px;
-  height: 10px;
-  margin-top: 4rem;
 }
 
 .grid .people-card__result-icon {
@@ -143,11 +125,7 @@
   padding: 12px 10px;
   width: 200px;
   float:right;
-  line-height: 1;
-}
-
-.people__select::after {
-  padding: 20px !important;
+  line-height: 30px;
 }
 
 
@@ -157,6 +135,10 @@
   padding-top: 1rem;
   padding-right: 1rem;
   width: 280px;
+}
+
+option {
+  padding: 100px;
 }
 
 .people-card__buttons {
@@ -223,6 +205,7 @@ p {
   display: flex;
   width: 100%;
   color: #fff;
+  height: 52px;
 }
 
 .separate-button {
@@ -270,11 +253,9 @@ p {
   padding: 15px;
 }
 
-
-
-
-
-
+.banner__cta {
+  cursor: pointer;
+} 
 
 .hidden {
   display: none;
@@ -298,7 +279,7 @@ p {
 
 @media only screen and (max-width: 768px){
   .people-card__vote-container {
-    margin-top: -0.5rem;
+    margin-top: -1rem;
   }
 
   .people-card__name {
@@ -337,7 +318,7 @@ p {
   }
 
   .people-card__vote-container {
-    margin-top: 11.5rem;
+    margin-top: 11rem;
   }
 
   .people-card__result {
@@ -416,5 +397,15 @@ p {
     height: 12px;
   }
 
+  .grid .people-card__vote-container {
+    margin-top: 19.8rem;
+}
+
+}
+
+@media (min-width: 780px) and (max-width: 1098px) {
+  .people-card__vote-container{
+    margin-top: 1.9rem;
+  }
 }
 

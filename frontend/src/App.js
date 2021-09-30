@@ -2,10 +2,11 @@ import "./css/main.css";
 import "./css/auxiliar.css";
 import MainImg from "./assets/pope-francis.png";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+import { Link } from 'react-router-dom';
 import { MdThumbUp, MdThumbDown, MdSearch } from "react-icons/md";
 
 import People from "./components/People";
+import Register from './components/Register';
 
 function App() {
   return (
@@ -22,15 +23,16 @@ function App() {
               />
             </svg>
           </button>
+          <Router>
           <ul className="nav__links">
             <li>
-              <a href="#">Past Trials</a>
+              <Link to="/">Past Trials</Link>
             </li>
             <li>
-              <a href="#">How It Works</a>
+            <Link to="/">How it Works</Link>
             </li>
             <li>
-              <a href="#">Login / Sign Up</a>
+            <Link to="/">Login / Sign Up</Link>
             </li>
             <li>
               <form>
@@ -48,7 +50,7 @@ function App() {
                 </button>
               </form>
             </li>
-          </ul>
+          </ul></Router>
         </div>
       </nav>
       <header className="hero">
@@ -85,7 +87,6 @@ function App() {
                 <a href="http://wikipedia.com">
                   <svg
                     className="featured-card__more-info-icon"
-                    preserveAspectRatio
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 27 18"
                   >
@@ -145,16 +146,16 @@ function App() {
               </g>
             </svg>
           </button>
-        </aside>
+        </aside>  <Router>
         <main role="main">
           {/* Start: Implementation */}
-          <Router>
+        
             <div>
-              <Switch>
+              <Switch> <Route path="/register" component={Register} />
                 <Route path="/" component={People} />
+               
               </Switch>
             </div>
-          </Router>
           👉 Your code goes here 👈
           {/* End: Implementation */}
         </main>
@@ -177,9 +178,10 @@ function App() {
             </h2>
           </div>
           <div className="banner__right">
-            <button className="banner__cta">Submit a name</button>
+            <Link to="/register"><button className="banner__cta">Submit a name</button></Link>
           </div>
         </aside>
+          </Router>
         <hr role="separator" />
         <footer className="footer">
           <div className="footer__links">

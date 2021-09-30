@@ -21,7 +21,6 @@ const People = () => {
   //Array from db
   const [people, setPeople] = useState([]);
 
-
   //Votes
   var vote = "";
   var voteP = 0;
@@ -34,24 +33,30 @@ const People = () => {
   const handleVote = async (id) => {
     handleClick();
     //console.log(id);
-    const res = await fetch(`${API}/people/${id}`);
-    const data = await res.json();
-    if (vote === "positive") {
-      let added = data.votes.positive + 1;
-      console.log(added);
-      voteP = added;
-      voteN = data.votes.negative;
+    if (!isPressed) {
+      const res = await fetch(`${API}/people/${id}`);
+      const data = await res.json();
+      if (vote === "positive") {
+        let added = data.votes.positive + 1;
+        console.log(added);
+        voteP = added;
+        voteN = data.votes.negative;
+      } else {
+        let added = data.votes.negative + 1;
+        console.log(added);
+        voteN = added;
+        voteP = data.votes.positive;
+      }
+      sendVote(id);
+      vote = "";
+      voteP = 0;
+      voteN = 0;
+      loadData();
     } else {
-      let added = data.votes.negative + 1;
-      console.log(added);
-      voteN = added;
-      voteP = data.votes.positive;
+      vote = "";
+      voteP = 0;
+      voteN = 0;
     }
-    sendVote(id);
-    vote = "";
-    voteP = 0;
-    voteN = 0;
-    loadData();
   };
 
   const sendVote = async (id) => {
@@ -69,6 +74,7 @@ const People = () => {
           },
         }),
       });
+      console.log(res);
     }
   };
 
@@ -89,19 +95,17 @@ const People = () => {
     return () => {
       window.removeEventListener("resize", handleWindowResize);
     };
-    
   }, []);
 
   const [isPressed, setIsPressed] = useState(false);
 
   const onPressed = () => {
     setIsPressed(!isPressed);
- }
+  };
 
-  const handleClick = (index) =>{
+  const handleClick = (index) => {
     onPressed(index);
-  }
-
+  };
 
   return (
     <div>
@@ -146,28 +150,38 @@ const People = () => {
             <div
               key={i}
               className="slider__card card"
-              style={isGrid ? {
-                background:
-                  windowWidth >= 650
-                    ? `linear-gradient(90deg, rgba(217,217,217,0.28895308123249297) 7%, rgba(189,189,189,1) 21%, rgba(112,112,112,1) 50%, rgba(189,189,189,1) 100%), url(${index.picture}) -5% 10% no-repeat`
-                    : `linear-gradient(90deg, rgba(89,87,87,0.6) 0%, rgba(112,112,112,0.6) 100%), url(${index.picture}) 100% 100% no-repeat`,
-              } : {background:
-                windowWidth >= 650
-                  ? `linear-gradient(90deg, rgba(89,87,87,0.6) 0%, rgba(112,112,112,0.6) 100%), url(${index.picture}) 100% 100% no-repeat`
-                  : `linear-gradient(90deg, rgba(89,87,87,0.6) 0%, rgba(112,112,112,0.6) 100%), url(${index.picture}) 100% 100% no-repeat`,} }
+              style={
+                isGrid
+                  ? {
+                      background:
+                        windowWidth >= 650
+                          ? `linear-gradient(90deg, rgba(217,217,217,0.28895308123249297) 7%, rgba(189,189,189,1) 21%, rgba(112,112,112,1) 50%, rgba(189,189,189,1) 100%), url(${index.picture}) -12% 10% no-repeat`
+                          : `linear-gradient(90deg, rgba(89,87,87,0.6) 0%, rgba(112,112,112,0.6) 100%), url(${index.picture}) 100% 100% no-repeat`,
+                    }
+                  : {
+                      background:
+                        windowWidth >= 650
+                          ? `linear-gradient(90deg, rgba(89,87,87,0.6) 0%, rgba(112,112,112,0.6) 100%), url(${index.picture}) 100% 100% no-repeat`
+                          : `linear-gradient(90deg, rgba(89,87,87,0.6) 0%, rgba(112,112,112,0.6) 100%), url(${index.picture}) 100% 100% no-repeat`,
+                    }
+              }
             >
               <div
                 className={
                   voteResult ? "vote-result__positive" : "vote-result__negative"
                 }
               >
-                {
-                  voteResult ? <MdThumbUp className="people-card__result-icon" size="20"/> : <MdThumbDown className="people-card__result-icon" size="20"/>
-                }
+                {voteResult ? (
+                  <MdThumbUp className="people-card__result-icon" size="20" />
+                ) : (
+                  <MdThumbDown className="people-card__result-icon" size="20" />
+                )}
               </div>
 
               <div className="people-card__date">
-                <span className="people-card__magic-date" id={i}>{!isPressed ? magicDate : 'Thank for your Vote!'}</span>
+                <span className="people-card__magic-date" id={i}>
+                  {!isPressed ? magicDate : "Thank for your Vote!"}
+                </span>
                 <div className="people-card__buttons">
                   <button
                     className="icon-button separate-button"
@@ -192,7 +206,7 @@ const People = () => {
                     key={i}
                     onClick={() => handleVote(`${index._id}`)}
                   >
-                    {!isPressed ? 'Vote Now': 'Vote Again'}
+                    {!isPressed ? "Vote Now" : "Vote Again"}
                   </button>
                 </div>
               </div>
